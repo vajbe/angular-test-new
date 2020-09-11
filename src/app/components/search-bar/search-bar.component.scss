@@ -1,0 +1,18 @@
+.top-search-bar{
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 5px;
+}
+.top-search-bar *{
+    margin: 2px;
+}
+
+.city-textbox{
+    display: inline-block;
+    width: 20%;
+}
+.area-textbox{
+    width: 40%;
+    display: inline-block;
+}

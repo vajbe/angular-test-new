@@ -1,0 +1,20 @@
+<div class="card-container">
+  <div class="card-group">
+    <div class="card" *ngFor="let item of restaurantData.restaurants">
+      <img class="card-img-top" src="{{item.image_url}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <p class="card-text">Area - {{item.address}}</p>
+        <small class="text-muted">City - {{item.city}}</small>
+      </div>
+      <div class="card-footer">
+        <div *ngIf="!item.isFav; else removeFav">
+          <input type="button" class="btn btn-primary" value="Add to Favourites" (click)="saveFav(item)">
+        </div>
+        <ng-template #removeFav>
+          <input type="button" class="btn btn-danger" value="Remove from Favourites" (click)="removeFavItem(item)">
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
